@@ -13,7 +13,11 @@ html, body {
 }
 ul, ol, li a {
   list-style: none;
+  text-decoration: none;
   cursor: pointer;
+}
+ul {
+  padding-inline-start: 20px;
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -22,6 +26,9 @@ h1, h2, h3, h4, h5, h6 {
 a {
   outline: none;
   cursor: pointer;
+}
+a:active {
+  color: #000;
 }
 input {
   border:none;

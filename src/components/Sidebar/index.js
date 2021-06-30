@@ -1,28 +1,50 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
-import Menulist from '../MenuList';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import { SideBarContainer, BurgerBtn } from './styles';
+import React, { useState } from 'react';
+import { SidebarWrap, SidebarNav} from './styles';
+import { SidebarData } from './data/sidebarData';
+import TopNavbar from '../TopNavbar';
+import SubMenu from './SubMenu.js/index.js';
+import { IconContext } from 'react-icons/lib';
 
 const Sidebar = () => {
-  const [sidebar, setSidebar] = useState(false)
+  const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
     <>
-      <BurgerBtn onClick={showSidebar}>
-        <Link to="#">
-         {sidebar ? <AiIcons.AiOutlineClose /> : <FaIcons.FaBars />}
-        </Link>
-      </BurgerBtn>
-    <SideBarContainer position={sidebar ? true : false}>
-       <Menulist title={'introdução'} />
-       <Menulist title={'tokens'} />
-    </SideBarContainer>
-   </>
-  )
-}
+      <IconContext.Provider value={{ color: '#04AA6D' }}>
+        <TopNavbar toggle={showSidebar} />
+          
+        <SidebarNav showBar={sidebar}>
+            <SidebarWrap>          
+              {SidebarData.map((item, index) => {
+                return <SubMenu item={item} key={index} />;
+              })}
+            </SidebarWrap>
+        </SidebarNav>
+          
+      </IconContext.Provider>
+    </>
+  );
+};
 
 export default Sidebar;
+
+
+        {/* <Nav>
+          {sidebar === false ? 
+          <NavIcon to='#'>
+            <FaIcons.FaBars onClick={showSidebar} />
+          </NavIcon>
+          :
+          <NavIcon to='#'>
+              <AiIcons.AiOutlineClose onClick={showSidebar} />  
+          </NavIcon>
+          }
+          <div>
+            <img src={logo}></img>
+          </div>
+          <div>
+          <h6>Design System Library</h6>
+          </div>
+        </Nav> */}

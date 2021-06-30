@@ -1,25 +1,24 @@
 import GlobalStyles from './styles/globalStyles';
-// import TopNav from './components/TopNav';
-import Sidebar1 from './components/Sidebar1/Sidebar';
-// import Sidebar from './components/Sidebar';
+import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 //Pages
-import Home from './pages/home';
-import Colours from './pages/tokens/colours';
-import Typography from './pages/tokens/typography';
+import about from './views/introduction/about';
+import howToUse from './views/introduction/howToUse';
+import Colours from './views/tokens/colours';
+import Typography from './views/tokens/typography';
 
 function App() {
   return (
     <div>
       <GlobalStyles />
       <Router>
-        {/* <TopNav /> */}
-        <Sidebar1 />
+        <Sidebar />
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/colours' exact component={Colours} />
-          <Route path='/typography' exact component={Typography} />
+          <Route path='/views/introduction/about' exact component={about} />
+          <Route path='/views/introduction/howToUse' exact component={howToUse} />
+          <Route path='/views/tokens/colours' exact component={Colours} />
+          <Route path='/views/tokens/typography' exact component={Typography} />
         </Switch>
       </Router>
     </div>

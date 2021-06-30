@@ -36,7 +36,6 @@ export const SidebarNav = styled.div`
   justify-content: center;
   position: fixed;
   top: 45px;
-  /* left: ${props => props.showBar ? '0' : '-100%'}; */
   padding: 40px 0 0 0;
   transition: all 0.5s ease-in-out;
 

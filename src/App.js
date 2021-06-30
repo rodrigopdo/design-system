@@ -3,10 +3,10 @@ import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 //Pages
-import about from './views/introduction/about';
-import howToUse from './views/introduction/howToUse';
-import Colours from './views/tokens/colours';
-import Typography from './views/tokens/typography';
+import about from './pages/introduction/about';
+import howToUse from './pages/introduction/howToUse';
+import colours from './pages/tokens/colours';
+import typography from './pages/tokens/typography';
 
 function App() {
   return (
@@ -15,10 +15,10 @@ function App() {
       <Router>
         <Sidebar />
         <Switch>
-          <Route path='/views/introduction/about' exact component={about} />
-          <Route path='/views/introduction/howToUse' exact component={howToUse} />
-          <Route path='/views/tokens/colours' exact component={Colours} />
-          <Route path='/views/tokens/typography' exact component={Typography} />
+          <Route path='/introduction/about' exact component={about} />
+          <Route path='/introduction/howToUse' exact component={howToUse} />
+          <Route path='/tokens/colours' exact component={colours} />
+          <Route path='/tokens/typography' exact component={typography} />
         </Switch>
       </Router>
     </div>

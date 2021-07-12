@@ -9,9 +9,9 @@ export const SidebarLink = styled(NavLink)`
   padding: 10px;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   &:hover {
     border-right: 4px solid #04AA6D;
     background-color: #E6E6E6;
@@ -24,7 +24,7 @@ export const SidebarLabel = styled.span`
 `;
 
 export const DropdownLink = styled(NavLink)`
-  background-color: #f6f6f4;
+  background-color: #fafafa;
   height: 30px;
   padding-left: 1.5rem;
   display: flex;
@@ -35,10 +35,14 @@ export const DropdownLink = styled(NavLink)`
   &:hover {
     border-right: 4px solid #04AA6D;
     background-color: #E6E6E6;
-    font-weight: 600;
+    font-weight: 700;
   }
   &.selected {
     border-right: 4px solid #04AA6D;
     font-weight: 700;
+  }
+  &.active {
+    font-weight: bolder;
+    opacity: 0.1;
   }
 `;

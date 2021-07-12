@@ -3,6 +3,7 @@ import { Nav, NavIcon } from './styles';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import logo from '../../contents/logo/logo-light-vert.png';
+import LinkTopNavbar from './LinksTopNavbar';
 
 const TopNavbar = (props) => {
 
@@ -25,6 +26,7 @@ const showSidebar = () => setSideBar(!sidebar);
         <div>
           <img src={logo}></img>
         </div>
+        <LinkTopNavbar />
         <div>
         <h6>Design System Library</h6>
         </div>

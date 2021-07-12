@@ -16,12 +16,12 @@ export const SidebarData = [
       {
         title: 'Sobre o Design System',
         path: '/introduction/about',
-        icon: <IoIcons.IoIosPaper />
+        // icon: <IoIcons.IoIosPaper />
       },
       {
         title: 'Como utilizar',
         path: '/introduction/howToUse',
-        icon: <IoIcons.IoIosPaper />
+        // icon: <IoIcons.IoIosPaper />
       }
     ]
   },
@@ -36,14 +36,12 @@ export const SidebarData = [
       {
         title: 'Cores',
         path: '/tokens/colours',
-        icon: <IoIcons.IoIosPaper />,
-        cName: 'sub-nav'
+        // icon: <IoIcons.IoIosPaper />,
       },
       {
         title: 'Tipografia',
         path: '/tokens/typography',
-        icon: <IoIcons.IoIosPaper />,
-        cName: 'sub-nav'
+        // icon: <IoIcons.IoIosPaper />,
       }
     ]
   }

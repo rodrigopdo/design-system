@@ -26,8 +26,7 @@ const SubMenu = ({ item }) => {
         item.subNav.map((item, index) => {
           return (
             <DropdownLink activeClassName="selected" to={item.path} key={index}>
-              {/* {item.icon} */}
-              <SidebarLabel>{item.title}</SidebarLabel>
+              <SidebarLabel >{item.title}</SidebarLabel>      
             </DropdownLink>
           );
         })}

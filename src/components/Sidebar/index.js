@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SidebarWrap, SidebarNav} from './styles';
 import { SidebarData } from './data/sidebarData';
 import TopNavbar from '../TopNavbar';
-import SubMenu from './SubMenu.js/index.js';
+import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
 
 const Sidebar = () => {
@@ -18,7 +18,7 @@ const Sidebar = () => {
         <SidebarNav showBar={sidebar}>
             <SidebarWrap>          
               {SidebarData.map((item, index) => {
-                return <SubMenu item={item} key={index} />;
+                return <SubMenu close={showSidebar} item={item} key={index} />;
               })}
             </SidebarWrap>
         </SidebarNav>

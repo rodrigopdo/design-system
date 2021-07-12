@@ -1,5 +1,6 @@
 import GlobalStyles from './styles/globalStyles';
 import Sidebar from './components/Sidebar';
+import { Row } from './utilities/grid';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 //Pages
@@ -12,15 +13,17 @@ function App() {
   return (
     <div>
       <GlobalStyles />
-      <Router>
-        <Sidebar />
-        <Switch>
-          <Route path='/introduction/about' exact component={about} />
-          <Route path='/introduction/howToUse' exact component={howToUse} />
-          <Route path='/tokens/colours' exact component={colours} />
-          <Route path='/tokens/typography' exact component={typography} />
-        </Switch>
-      </Router>
+        <Router>
+          <Row>
+            <Sidebar />
+            <Switch>
+              <Route path='/introduction/about' exact component={about} />
+              <Route path='/introduction/howToUse' exact component={howToUse} />
+              <Route path='/tokens/colours' exact component={colours} />
+              <Route path='/tokens/typography' exact component={typography} />
+            </Switch>
+          </Row>
+        </Router>
     </div>
   );
 }

@@ -24,6 +24,7 @@ export const ColourTitle = styled.div`
     font-weight: 400;
     font-family: "SFMono-Regular",Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;
     margin-top: 10px;
+    transition: 0.3s;
   }
   button {
     margin: 50px auto 0 0;

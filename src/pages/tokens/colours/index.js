@@ -22,7 +22,7 @@ const x = coloursData[0].hexCode
           copy(hexColour);
           setShowCopied(!showCopied);
           // alert(hexColour + ' Copied to Clipboard!')
-          setTimeout(() => setShowCopied(showCopied), 3000)
+          setTimeout(() => setShowCopied(showCopied), 4000)
         };
 
         return <>
